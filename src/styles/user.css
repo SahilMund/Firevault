@@ -1,0 +1,14 @@
+.card__body{
+    width:50%;
+    margin:5px auto;
+}
+
+.form__group{
+    text-align: left;
+}
+
+@media screen and (max-width: 799px) {
+   .card__body{
+    min-width: 480px;
+   }
+}

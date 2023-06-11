@@ -1,0 +1,252 @@
+/* font import */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+/*-------------------- global styles---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* bootstrap clearance */
+.row {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+/*----------- self made pre defined classes -------*/
+.my-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* -------------className styles---------------- */
+/* header */
+.navbar {
+  /* box-shadow: 0 2px 15px 0 rgba(129, 129, 129, 0.719); */
+  border-bottom: 1px solid rgba(214, 214, 214, 0.562);
+  background-color: #fff !important;
+}
+.nav-link {
+  padding: 0 !important;
+}
+.navbar-brand {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 22px !important;
+  color: #5f6368 !important;
+}
+.navbar .form-inline {
+  width: 800px;
+}
+.navbar .form-control {
+  background-color: #f1f3f4;
+  border-radius: 5px;
+}
+.navbar-nav i {
+  font-size: 20px;
+}
+
+.navbar .dropdown-item {
+  padding: 4px 8px;
+}
+.main-div-row {
+  min-height: 100vh;
+  display: flex;
+}
+/* sidebar */
+.side-bar-col {
+  width: auto;
+  padding: 1em;
+}
+.side-bar li {
+  list-style: none;
+  margin: 2px 0;
+}
+.sidebar-icon {
+  font-size: 1.1em !important;
+}
+.side-bar .active {
+  background-color: #feefc3 !important;
+}
+.sidebar-li {
+  display: flex;
+  align-items: center;
+}
+.main-col {
+  width: 100%;
+  padding: 0 1em;
+}
+
+/* CreateNote Component */
+.main-input-div {
+  width: 40%;
+  margin: 30px auto;
+  background-color: #fff;
+  box-shadow: 1px 1px 15px 0 rgba(129, 129, 129, 0.719);
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  border-radius: 10px;
+  position: relative;
+}
+.pin {
+  position: absolute !important;
+  right: 3%;
+  top: 5%;
+}
+.pin i {
+  font-size: 0.8em;
+}
+.main-input-div input,
+.main-input-div textarea {
+  padding: 4px 10px;
+  margin: 2px 0;
+  border: none;
+}
+.main-input-div input:focus,
+.main-input-div textarea:focus {
+  outline: none;
+}
+.main-input-div input {
+  font-weight: 600;
+}
+.addnote-div {
+  display: flex;
+  justify-content: end;
+}
+.option-menu .col-1,
+.option-menu .col-2 {
+  padding: 0 !important;
+}
+.menu-icon {
+  font-size: 0.8em !important;
+}
+.add-note-btn {
+  padding: 0 15px;
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  color: #5f6368;
+}
+.add-note-btn:focus {
+  outline: none;
+}
+.add-note-btn:hover,
+.add-note-btn:hover i {
+  color: darkgreen;
+}
+/* notes component */
+.note {
+  width: 280px;
+  height: max-content;
+  padding: 10px 10px 5px 10px;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  margin: 15px;
+  position: relative;
+}
+
+.navbar-customer-note-collapse {
+  padding: 0 2%;
+  flex-basis: 0 !important;
+  flex-grow: inherit !important;
+    /* /* flex-grow: 1; */
+}
+.note h1 {
+  font-size: 1.3em;
+}
+.note .option-menu {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.note:hover .option-menu {
+  opacity: 1;
+}
+.delete-icon:hover {
+  color: crimson;
+}
+.noteBucket,
+.pinnedNoteBucket{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 25px;
+}
+ .list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 25px;
+}
+.div-headings {
+  font-size: 0.9em;
+  color: #5f6368;
+}
+#darkMode,
+#darkMode .main-input-div,
+#darkMode .main-input-div input,
+#darkMode .main-input-div textarea {
+  background-color: #202124 !important;
+}
+#darkMode .dropdown-menu {
+  background-color: #202124 !important;
+}
+
+#darkMode * {
+  color: rgb(192, 192, 192) !important;
+}
+#darkMode ::placeholder {
+  color: #b5b7b9 !important;
+}
+#darkMode .main-input-div,
+#darkMode .dropdown-menu {
+  border: 1px solid #dddddd;
+  box-shadow: none;
+}
+#darkMode .dropdown-menu a:hover {
+  background-color: #fff;
+  color: #000 !important;
+}
+.instruction-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.instruction-div img {
+  opacity: 0.5;
+  filter: grayscale(1);
+}
+.instruction-div p {
+  font-size: 1.3em;
+  opacity: 0.5;
+}
+
+@media (max-width: 800px) {
+  .main-input-div {
+    width: 90%;
+    margin: 30px auto;
+    background-color: #fff;
+    box-shadow: 1px 1px 15px 0 rgba(129, 129, 129, 0.719);
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    border-radius: 10px;
+    position: relative;
+  }
+  .side-bar-col,
+  .fa-bars {
+    display: none;
+  }
+  .form-control {
+    margin: 0 !important;
+  }
+  .note .option-menu,
+  .note .option-menu:hover {
+    opacity: 0.5;
+  }
+  .add-note-btn {
+    display: none;
+  }
+}

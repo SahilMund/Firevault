@@ -1,0 +1,145 @@
+.wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    /* margin: 20px auto; */
+    margin-top: 0;
+    color: whitesmoke;
+    overflow: hidden;
+    /* scroll-behavior: smooth; */
+    /* background-image: linear-gradient(rgb(0, 90, 167,.4),rgb(255, 253, 228,.8)); */
+    background-image: linear-gradient( 315deg, rgba(84,212,228,1) 0.2%, rgb(144 133 179) 99.9% );
+
+}
+
+.wrapper>img {
+
+
+    width: 100vw;
+    height: 110vh;
+    z-index: -1;
+    position: absolute;
+}
+
+.parent__icons svg {
+    font-size: larger;
+    color: black;
+}
+
+.boxes a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.parent__icons:first-child svg {
+    color: crimson;
+}
+
+.main {
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 95%;
+    flex: 1;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid lightgrey;
+    border-radius: 7px;
+    flex-shrink: 1;
+    min-height: 100px;
+    width: 250px;
+    height: 200px;
+    margin: 5px;
+    border-color: antiquewhite;
+    background-color: rgba(245, 245, 245, .5);
+
+}
+
+.boxes:hover {
+    background-color: rgba(245, 245, 245, .8);
+}
+
+.left>img {
+    border-radius: 5px;
+}
+
+.left {
+    height: 100%;
+
+}
+
+.right {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95%;
+    padding: 10px;
+}
+
+.icns {
+    font-size: 90px !important;
+    color: rgb(1, 150, 150);
+}
+
+.title {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+b {
+    color: azure;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    color: #2475B0;
+    padding-bottom: 10px;
+
+}
+
+.bottom:hover {
+    color: rgba(16, 78, 248, 0.932);
+}
+
+@media(max-width:498px) {
+    .main {
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+
+    .title {
+        padding-top: 30px;
+    }
+}
+
+
+
+.parent__icons {
+    display: flex;
+}
+
+.icons__home {
+    align-items: center;
+}

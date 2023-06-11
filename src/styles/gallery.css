@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+:root {
+  --primary: #efb6b2 !important;
+  --secondary: #4e4e4e !important;
+  --error: #ff4a4a !important;
+}
+
+/* base styles & title */
+body {
+  font-family: "Noto Serif";
+  color: var(--secondary);
+}
+
+.darkmode {
+  background-color: #202124;
+  color: white;
+  width: 100%;
+}
+
+.galleryHome {
+  /* max-width: 960px; */
+  margin: 0 auto;
+}
+
+.title h1 {
+  color: var(--primary);
+  font-size: 2.2rem;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+.title h2,
+.title p {
+  text-align: center;
+}
+
+.title h2 {
+  margin-top: 2%;
+  font-size: 1.8rem;
+}
+
+/* upload form styles */
+form {
+  margin: 30px auto 10px;
+  text-align: center;
+}
+
+
+#uploadLabel input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+#uploadLabel {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  margin: 10px auto;
+  line-height: 30px;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.icon__dark {
+  align-items: center;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 10px auto;
+  line-height: 30px;
+  color: var(--primary) !important;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.parent__icon__dark {
+  display: flex;
+}
+
+.icon__dark svg {
+  font-size: 1.8rem;
+}
+
+#uploadLabel:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.output {
+  height: 60px;
+  font-size: 0.8rem;
+}
+
+.error {
+  color: var(--error);
+}
+
+/* progress bar styles */
+.progress-bar {
+  height: 5px;
+  background: var(--primary) !important;
+  margin-top: 20px;
+}
+
+/* image grid styles */
+.img-grid {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+  max-width: 960px;
+  padding-bottom: 4%;
+
+}
+.img-grid svg{
+  color: crimson;
+  float: right;
+}
+
+.img-wrap {
+  overflow: hidden;
+  height: 0;
+  padding: 50% 0;
+  /* padding controls height, will always be perfectly square regardless of width */
+  position: relative;
+  opacity: 0.8;
+}
+
+.img-wrap img {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 150%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* modal styles */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.backdrop img {
+  display: block;
+  max-width: 60%;
+  max-height: 80%;
+  margin: 60px auto;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+  border: 3px solid white;
+}
+
+/* for respnosiveness */
+@media (max-width:460px) {
+  .img-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: center;
+    grid-gap: 25px;
+    margin: 20px auto;
+  }
+
+  .backdrop img {
+    max-width: 90%;
+    margin: 100px auto;
+  }
+}
